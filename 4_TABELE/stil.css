@@ -1,0 +1,30 @@
+th{
+    border: 1px black solid;
+    padding: 10px; 
+}
+td{
+    border: 1px black solid;
+    padding: 10px;
+}
+.prvired{
+    color: red;
+}
+tr:nth-child(3){
+    background-color: yellow;
+}
+td:nth-child(3){
+    background-color: yellow;
+}
+tr:nth-child(odd){
+    font-style: italic;
+}
+ tr:nth-child(even):hover{
+    background-color: yellowgreen;
+}
+ tr:nth-child(3n){
+    color: blue;
+}
+
+
+
+

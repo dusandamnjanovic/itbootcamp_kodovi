@@ -1,0 +1,25 @@
+h2{
+    text-align: center;
+    color:gray
+}
+body{
+    background-color: skyblue;
+}
+img{
+    border-style: double;
+    border-color: red;
+}
+.nepar{
+    color:green;
+    font-size: 20px;
+    font-style: italic;
+}
+#drugi{
+    color:blue;
+}
+a:link{
+    color:red;
+}
+a:hover{
+    color:green;
+}
