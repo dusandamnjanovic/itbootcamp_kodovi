@@ -1,0 +1,64 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box; /* Zbog menija da se uklapa zbog zirine 25% */
+}
+nav{
+    position: fixed;
+    top: 0px;
+    width: 100%; /* Da zauzme citavu sirinu ekrana */ 
+}
+nav ul li{
+    float: left;
+    width: 25%;
+    border: 2px solid white;
+    text-align: center;   
+}
+nav ul{
+    overflow: hidden;
+    list-style-type: none;
+    background-color: brown;
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    display: block; /* Link zauzima od pocetka do kraja stranice,
+                    ceo <li> je klikljiv, a ne samo tekst linka, vec cela povrsina */
+    padding: 8px;
+}
+nav ul li a:hover{
+    background-color: chocolate;
+}
+.submenu{
+    position: absolute;
+    background-color: brown;
+    width: 25%;
+    display: none; /* Ne prikazuje se na stranici*/
+}
+.dropdown:hover .submenu{ /* Pristupa se submenu samo kada je u stanju hover na elementu li koji ima klasu dropdown */
+    display: block;
+}
+body{
+    position: relative;
+    top: 40px;
+}
+footer{
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+}
+footer ul{
+    background-color: cadetblue;
+    width: 50%;
+}
+footer ul li{
+    text-align: center;
+}
+footer ul li a{
+    display: block;
+    text-decoration: none;
+    padding: 8px;
+}
+footer ul li a:hover{
+    background-color: darkgray;
+}

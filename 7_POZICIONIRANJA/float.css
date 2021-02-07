@@ -1,0 +1,54 @@
+p{
+    background-color: aqua;
+
+}
+#float p{
+    float: right;
+    width: 250px;
+    margin: 20px;
+}
+#float p:first-child{
+    float: left;
+}
+#float{
+    overflow: hidden;
+}
+.topbar li{
+    float: left;
+    
+    height: 30px;
+    position: relative;
+    background-color: darkgray;
+    box-sizing: border-box;
+    width: 25%;
+    text-align: center;
+}
+ul{
+    overflow: hidden;
+    box-sizing: border-box;
+    width: 1064px;
+    list-style-type: none;
+    position: absolute; 
+    left: -48px;
+    
+
+    
+}
+.topbar{
+    position: fixed;
+    top: -16px;
+    z-index: 2;
+    
+}
+li:hover{
+    background-color: red;
+}
+a{
+    color: white;
+}
+.topbar li a{
+    position: relative;
+    top: 5px;
+}
+
+

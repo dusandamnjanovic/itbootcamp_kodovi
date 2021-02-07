@@ -1,0 +1,16 @@
+.p1{
+    background-color: chartreuse;
+    width: 70px;
+    height: 30px;
+    position: absolute;
+    z-index: 2;
+    
+}
+.p2{
+    background-color: crimson;
+    width: 70px;
+    position: absolute;
+    top: 15px;
+    left: 30px;
+    z-index: 1;
+}

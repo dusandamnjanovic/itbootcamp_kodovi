@@ -1,0 +1,27 @@
+.topbar li:hover{
+    background-color: red;
+}
+a{
+    color: white;
+}
+.topbar li a{
+    position: relative;
+    top: 5px;
+}
+.topbar li{
+    position: relative;
+    background-color: darkgray;
+    margin: 0px;
+    box-sizing: border-box;
+    height: 50px;
+    width: 150px;
+    position: relative;
+    left: -48px;
+
+   
+}
+ul{
+    list-style-type: none;
+    position: relative;
+    top: -17px;
+}
