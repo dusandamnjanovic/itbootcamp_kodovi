@@ -1,0 +1,146 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.pozadina{
+	background-image:url("background.jpg");   
+	background-position:center;
+	background-size:cover;	
+}
+
+#header{
+    position: fixed;
+    top: 0px;
+    margin-left: 150px;
+    width:819px;
+}
+
+nav ul li{
+    float: left;
+    width: 20%;
+    text-align: center;
+    height: 35px; 
+}
+
+nav ul{
+    overflow: hidden;
+    list-style-type: none;
+    background-color:#1a4666;
+}
+
+nav ul li a{
+    text-decoration: none;
+    display: block;
+    padding: 7px; 
+    color: white;
+}
+
+nav ul li a:hover{
+    transition: 0.3s;
+    background-color: lightslategrey;
+}
+
+.error{
+    color:red
+}
+
+.forma{
+    position: fixed;
+    top: 50px;
+    text-align: center;
+}
+
+.fieldset{
+    margin-left: 410px;
+    background-color:#1a4666;
+}
+
+input[type=text], select {
+    width: 100%;
+    padding: 8px 16px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=password], select {
+    width: 100%;
+    padding: 8px 16px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.greska{
+    color: red;
+    font-size: x-large;
+}
+
+#sidenav {
+    height: 800px;
+    width: 150px;  
+    position: fixed; 
+    background-color:#8C001A;   
+}
+
+#sidebar{
+    width:150px;
+	height:800px;
+	float:right;
+	background-color:#8C001A;
+}
+  
+.followers{
+    position: fixed;
+    margin-top: 50px;
+    margin-left: 270px;
+    border-collapse: collapse;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.followers tr th{
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+
+.followers th,
+.followers td {
+    padding: 12px 15px;
+}
+
+.followers tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.followers tr:nth-of-type(odd) {
+    background-color: rgb(97, 196, 235);
+}
+
+.followers tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+.followers tr:hover {
+    font-weight: bold;
+    color: #009879;
+}
