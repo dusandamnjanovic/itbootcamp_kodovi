@@ -11,17 +11,23 @@
 </body>
 </html>
 <?php
-
+    
     require_once "connection.php";
+    
     require_once "header.php";
+  
 
     if(empty($_SESSION['id'])){
         header("Location: login.php");
     }
 
-    $id = $_SESSION['id']; // ID logovanog korisnika  
-
+    $id = $_SESSION['id']; // ID logovanog korisnika
+        
+    $imePrezime = $_SESSION['ime_prezime'];
     
+    echo "<h3 class='pozdrav'> Hello, $imePrezime!</h3>";
+
+
     if(!empty($_GET['follow_id'])){ 
         $friendId = $conn->real_escape_string($_GET['follow_id']); // Specijalne karatkere sredjuje za upit
 
@@ -98,20 +104,22 @@
             echo "<td>"; 
             if($f1 == 0){ // Ako ga ne pratimo
                 if($f2 == 0){
-                    $text = "Follow";
+                    $text = "<span class='button_follow'>Follow</span>";
                 }
                 else{
-                    $text = "Follow back";
+                    $text = "<span class='button_follow'>Follow back</span>";
                 }
                 echo "<a href='followers.php?follow_id=$friendId'>$text</a>";
             }
             else{ // Ako ga pratimo
-                echo "<a href='followers.php?unfollow_id=$friendId'>Unfollow</a>";
+                echo "<a href='followers.php?unfollow_id=$friendId'><span class='button_follow'>Unfollow</span></a>";
             }
             echo "</td>";
             echo "</tr>";
         }
         echo "</table>";
+        
+        
     }
 
 

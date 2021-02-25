@@ -17,9 +17,9 @@
             <ul>
                 <li><a href="index.php">Home</a></li>
                 <li><a href="followers.php">Friends</a></li>
-                <li><a href="#">Change Profile</a></li>
-                <li><a href="#">Change password</a></li>
-                <li><a href="logout.php">Logout</a></li>
+                <li><a href="changeProfile.php">Change Profile</a></li>
+                <li><a href="changePass.php">Change password</a></li>
+                <li><a href="logout.php"><span class="odjava">Logout</span></a></li>
             </ul>
         </nav>
     </div>
@@ -28,5 +28,4 @@
     </div>
 
     <div id="sidebar">
-
     </div>

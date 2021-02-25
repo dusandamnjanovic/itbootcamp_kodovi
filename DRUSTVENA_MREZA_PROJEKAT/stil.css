@@ -27,7 +27,12 @@ nav ul li{
 nav ul{
     overflow: hidden;
     list-style-type: none;
-    background-color:#1a4666;
+    background-color:#1a4666;  
+}
+
+nav ul li a:hover{
+    transition: 0.3s;
+    background-color: lightslategrey;
 }
 
 nav ul li a{
@@ -37,10 +42,7 @@ nav ul li a{
     color: white;
 }
 
-nav ul li a:hover{
-    transition: 0.3s;
-    background-color: lightslategrey;
-}
+
 
 .error{
     color:red
@@ -50,11 +52,7 @@ nav ul li a:hover{
     position: fixed;
     top: 50px;
     text-align: center;
-}
-
-.fieldset{
     margin-left: 410px;
-    background-color:#1a4666;
 }
 
 input[type=text], select {
@@ -93,23 +91,23 @@ input[type=submit] {
 }
 
 #sidenav {
-    height: 800px;
+    height: 695px;
     width: 150px;  
-    position: fixed; 
+    position: fixed;
     background-color:#8C001A;   
 }
 
 #sidebar{
     width:150px;
-	height:800px;
+	height:695px;
 	float:right;
 	background-color:#8C001A;
 }
   
 .followers{
     position: fixed;
-    margin-top: 50px;
-    margin-left: 270px;
+    margin-top: 90px;
+    margin-left: 350px;
     border-collapse: collapse;
     font-size: 0.9em;
     font-family: sans-serif;
@@ -143,4 +141,140 @@ input[type=submit] {
 .followers tr:hover {
     font-weight: bold;
     color: #009879;
+}
+
+.pozdrav{
+    position: fixed;
+    margin-top: 36px;
+    margin-left: 150px;
+    color:#1a4666;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color:white;  
+}
+
+#header_login{
+    margin-left: 150px;	
+    width:819px;
+    height:70px;
+    background-color:#1a4666;
+    position: fixed;
+    top: 0px;
+}
+
+.forma_login{
+    position: fixed;
+    top: 90px;
+    text-align: center;
+    margin-left: 410px;
+}
+
+.poruka_login{
+    text-align: center;
+    padding: 20px;
+    color: white;
+}
+
+.pozadina_login{
+    background-image:url("background.jpg");   
+	background-position:center;
+	background-size:cover;
+}
+
+.button_follow {
+	box-shadow: 3px 4px 0px 0px #e80cb5;
+	background:linear-gradient(to bottom, #d682cc 5%, #d88dc0 100%);
+	background-color:#e007c7;
+	border-radius:18px;
+	border:1px solid #b51bdb;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	padding:3px 15px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #d977b7;
+}
+.button_follow {
+	background:linear-gradient(to bottom, #bd2a8e 5%, #e007c7 100%);
+	background-color:#bd2a8e;
+}
+.button_follow {
+	position:relative;
+	top:1px;
+}
+
+.forma_change{
+    position: fixed;
+    top: 90px;
+    text-align: center;
+    margin-left: 410px;
+}
+
+.index_poruke{
+    margin-left: 430px;
+    margin-top: 150px;
+    display: inline;
+}
+.index_poruke{
+    margin-left: 400px;
+    margin-top: 170px;
+    display: inline;
+}
+
+.index_login{
+    position: absolute;
+    margin-left: 310px;
+    margin-top: 110px;
+    padding: 15px; 
+    padding: 15px 25px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    background-color: #1c9bd6;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px rgb(146, 221, 226);  
+}
+
+.index_login:hover {background-color: #82d4e2}
+
+.index_register{
+    position: absolute;
+    margin-left: 650px;
+    margin-top: 110px;
+    padding: 15px;
+    padding: 15px 25px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    background-color: #1c9bd6;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px rgb(146, 221, 226);  
+} 
+
+
+.decoration{
+    text-decoration: none;
+    color: white;
+}
+
+.index_register:hover {background-color: #82d4e2}
+
+#header_register{
+    margin-left: 150px;	
+    width:819px;
+    height:50px;
+    background-color:#1a4666;
+    position: fixed;
+    top: 0px;
+}
+
+.poruka_register{
+    text-align: center;
+    padding: 10px;
+    color: white;
 }

@@ -9,10 +9,11 @@
 
     if($_SERVER['REQUEST_METHOD'] == "POST"){
         // Korisnik je poslao username i password i pokusava logovanje
+        
         $username = $conn->real_escape_string($_POST['username']);
         $pass = $conn->real_escape_string($_POST['pass']);
         $val = true;
-        if(empty($username)){
+        if(empty($username)){   
             $val = false;
             $usernameErr = "Username cannot be left blank!";
         }
@@ -38,6 +39,15 @@
                     // Ovde vrsimo logovanje
                     $_SESSION['id'] = $row['id'];
                     // $_SESSION['full_name'] = ;
+                    $q2 = "SELECT CONCAT(name, ' ' ,surname) AS 'ime_prezime' FROM profiles
+                        INNER JOIN users
+                        ON users.id=profiles.user_id
+                        WHERE username='$username'";
+                        $result2 = $conn->query($q2);
+                        $row2 = $result2->fetch_assoc();
+                        $_SESSION['ime_prezime'] = $row2['ime_prezime'];
+                       
+
                     header('Location: followers.php');
                 }
             }
@@ -55,22 +65,32 @@
     <title>Login to the site!</title>
     <link rel="stylesheet" href="stil.css">
 </head>
-<body>
-    <div class="forma">
-        <fieldset class="fieldset">
-            <form action="#" method="POST">
-                <label for="username">Username</label>
-                <input type="text" name="username" id="username">
-                <span class='error'><?php echo $usernameErr ?></span>
-                <br>
-                <label for="pass">Password</label>
-                <input type="password" name="pass" id="pass">
-                <span class='error'><?php echo $passErr ?></span>
-                <br>
+<body class="pozadina_login">
+    <div class="forma_login">
+        
+        <form action="#" method="POST">
+            <label for="username">Username</label>
+            <input type="text" name="username" id="username">
+            <span class='error'><?php echo $usernameErr ?></span>
+            <br>
+            <label for="pass">Password</label>
+            <input type="password" name="pass" id="pass">
+            <span class='error'><?php echo $passErr ?></span>
+            <br>
 
-                <input type="submit" value="Log In!">
-            </form>
-        </fieldset>
+            <input type="submit" value="Log In!">
+        </form>
+        
     </div>
+
+        <div id="sidenav">
+        </div>
+
+        <div id="sidebar">
+        </div>
+
+        <div id="header_login">
+            <h2 class="poruka_login">Please LogIn!</h2>
+        </div>
 </body>
 </html>

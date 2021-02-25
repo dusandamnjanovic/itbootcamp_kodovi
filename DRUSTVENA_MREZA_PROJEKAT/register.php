@@ -7,10 +7,8 @@
     <link rel="stylesheet" href="stil.css">
     
 </head>
-<?php
- require_once "header.php";
-?>
-<body>
+
+<body class="pozadina">
 
     <?php
         $name = $surname = $date = $korisnicko_ime = $lozinka = $repassword = "";
@@ -65,49 +63,49 @@
 
             if(empty($korisnicko_ime)){
                 $prikaz = false;
-                $usernameErr = "Nepravilno uneto korisnicko ime!";
+                $usernameErr = "Username is not valid!";
             }
             elseif(strpos($korisnicko_ime, ' ') !== false){  
                 $prikaz = false;
-                $usernameErr = "Vas username ima razmak"; 
+                $usernameErr = "Username is not valid!"; 
             }
             elseif(strlen($korisnicko_ime) < 5 || strlen($korisnicko_ime) > 50){
                 $prikaz = false;
-                $usernameErr = "Korisnicko ime mora biti duze od 5, a krace od 50 karaktera!";
+                $usernameErr = "Username is not valid!";
             }
             
 
 
             if(empty($lozinka)){
                 $prikaz = false;
-                $passwordErr = "Nepravilno uneta lozinka!";
+                $passwordErr = "Wrong password!";
             }
             elseif(strpos($lozinka, ' ') !== false){  
                 $prikaz = false;
-                $passwordErr = "Nepravilno uneta lozinka!"; 
+                $passwordErr = "Wrong password!"; 
             }
             elseif(strlen($lozinka) < 5 || strlen($lozinka) > 25){
                 $prikaz = false;
-                $passwordErr = "Lozinka mora biti izmedju 5 i 25 karaktera!";
+                $passwordErr = "Wrong password!";
             }
             elseif($lozinka!=$repassword){
                 $prikaz = false;
-                $passwordErr = "Ne poklapaju se lozinke!"; 
+                $passwordErr = "Passwords doesn't match!"; 
             }
             
 
 
             if(empty($repassword)){
                 $prikaz = false;
-                $repasswordErr = "Lozinke se ne poklapaju";
+                $repasswordErr = "Passwords doesn't match!";
             }
             elseif(strpos($repassword, ' ') !== false){  
                 $prikaz = false;
-                $repasswordErr = "Lozinke se ne poklapaju"; 
+                $repasswordErr = "Passwords doesn't match!"; 
             }
             elseif(strlen($repassword) < 5 || strlen($repassword) > 25){
                 $prikaz = false;
-                $repasswordErr = "Lozinka mora biti izmedju 5 i 25 karaktera!";
+                $repasswordErr = "Wrong password!";
             }
            
 
@@ -121,44 +119,44 @@
     ?>  
     
     <div class="forma">
-        <fieldset class="fieldset">
+        
             <form action="#" method="post">
                 
                 <p>
                     <label>Name:</label>
                     <input type="text" name="name" value="<?php echo $name ?>">
-                    <span class="error">*<?php echo $nameErr ?></span>
+                    <span class="error">*<?php echo $nameErr; ?></span>
                 </p>
 
                 <p>
                     <label>Surname:</label>
                     <input type="text" name="surname" value="<?php echo $surname ?>">
-                    <span class="error">*<?php echo $surnameErr ?></span>
+                    <span class="error">*<?php echo $surnameErr; ?></span>
                 </p>
                 
 
                 <p>
                     <label>Date of birth:</label><br>
                     <input type="date" name="date" min="1900-01-01" value="<?php echo date('Y-m-d') ?>"><br>
-                    <span class="error">*<?php echo $dateErr ?></span>
+                    <span class="error">*<?php echo $dateErr; ?></span>
                 </p>
 
                 <p>
                     <label>Username</label>
                     <input type="text" name="username" value="<?php echo $korisnicko_ime ?>">
-                    <span class="error">*<?php echo $usernameErr ?></span>
+                    <span class="error">*<?php echo $usernameErr; ?></span>
                 </p>
 
                 <p>
                     <label>Password:</label>
                     <input type="password" name="password">
-                    <span class="error">*<?php echo $passwordErr ?></span>
+                    <span class="error">*<?php echo $passwordErr; ?></span>
                 </p>
 
                 <p>
                     <label>Re-type password</label>
                     <input type="password" name="repassword">
-                    <span class="error">*<?php echo $repasswordErr ?></span>
+                    <span class="error">*<?php echo $repasswordErr; ?></span>
                 </p>
 
                 <p>
@@ -171,11 +169,23 @@
 
                 <p>
                     <input type="submit" name="submit" value="Submit">
-                </p>
+                </p>   
         
             </form>
-        </fieldset>
+       
     </div>
+
+            <div id="sidenav">
+            </div>
+
+            <div id="sidebar">
+            </div>
+
+            <div id="header_register">
+                <h2 class="poruka_register">Please register!</h2>
+            </div>
+
+            
         
     <?php
         if($prikaz){
