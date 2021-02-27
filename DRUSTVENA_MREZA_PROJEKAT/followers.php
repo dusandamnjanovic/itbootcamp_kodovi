@@ -61,13 +61,17 @@
         }   
     }
 
+    if(!empty($_GET["user_id"])){
+        $friendId = $conn->real_escape_string($_GET["user_id"]);
+    }
 
 
-    $q = "SELECT profiles.name, profiles.surname, users.username, users.id
+
+    $q = "SELECT profiles.name, profiles.surname, users.username, users.id, profiles.user_id
           FROM profiles
           INNER JOIN users
           ON users.id=profiles.user_id
-          WHERE users.id != '$id';";
+          WHERE profiles.user_id != $id;";
 
     $result = $conn->query($q);
     if(!$result->num_rows){
@@ -82,9 +86,11 @@
         </tr>";
         foreach($result as $row){
             echo "<tr>";
-            echo "<td>" . $row['name'] . " " . $row['surname'] . "</td>";
-            echo "<td>" . $row['username'] . "</td>";
             $friendId = $row['id'];
+            echo "<td>" . "<a href='profile.php?user_id=$friendId'>" . $row['name'] . "</a>" . "<a href='profile.php?user_id=$friendId'>". "  " . $row['surname']. "</a>" . "</td>";
+            echo "<td>" . $row['username'] . "</td>";
+           // $friendId = $row['id'];
+           // $_SESSION['id'] = $friendId;
 
             // Ispitujemo da li pratimo korisnika
             $sql1 = "SELECT * FROM followers 

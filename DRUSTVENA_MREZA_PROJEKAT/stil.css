@@ -278,3 +278,24 @@ input[type=submit] {
     padding: 10px;
     color: white;
 }
+
+.poruka_profile{
+    color: red;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.tabela{
+    position: absolute;
+    margin-top: 150px;
+    margin-left: 300px;
+    border: 2px solid black;
+}
+
+.link_tabela{
+    position: absolute;
+    margin-top: 300px;
+    margin-left: 300px;
+    color:#1a4666;
+    font-size: large;
+}
