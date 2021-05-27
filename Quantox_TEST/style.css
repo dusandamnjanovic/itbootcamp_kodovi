@@ -1,0 +1,69 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.header{
+    height:70px;
+    background-color:aqua;
+    text-align: center;
+    padding: 10px;
+    color: azure;
+}
+
+.error{
+    color: red;
+}
+
+.login_button{
+    position: absolute;
+    margin-left: 310px;
+    margin-top: 110px;
+    padding: 15px; 
+    padding: 15px 25px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    background-color: aqua;
+    border-radius: 15px;
+     
+}
+
+.register_button{
+    position: absolute;
+    margin-left: 650px;
+    margin-top: 110px;
+    padding: 15px;
+    padding: 15px 25px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    background-color: aqua;
+    border-radius: 15px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.forma{
+    position: absolute;
+    margin-left: 420px;
+    margin-top: 310px;
+}
+
+.search_button{
+    position: relative;
+    margin-left: 80px;
+    padding: 10px;
+    padding: 10px 20px;
+    font-size: 18px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    background-color: aqua;
+    border-radius: 15px;
+}
