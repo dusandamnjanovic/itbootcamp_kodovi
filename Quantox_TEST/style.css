@@ -4,8 +4,13 @@
     box-sizing: border-box;
 }
 
+body{
+    background-image:url("wallper.jpg");   
+	background-size:cover;
+}
+
 .header{
-    height:70px;
+    height:60px;
     background-color:aqua;
     text-align: center;
     padding: 10px;
@@ -66,4 +71,13 @@ a{
     outline: none;
     background-color: aqua;
     border-radius: 15px;
+}
+
+
+.logout a{
+    position: absolute;
+    background-color: red;
+    color: white;
+    padding: 15px;
+    margin-left: 1052px;
 }

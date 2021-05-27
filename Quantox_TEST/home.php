@@ -19,7 +19,7 @@
     <div>
         <p class="login_button"><a href="login.php">Login Screen</a></p>
         <p class="register_button"><a href="register.php">Register Screen</a></p>
-        <p><a href="logout.php">Log Out</a></p>
+        <p class="logout"><a href="logout.php">Log Out</a></p>
     </div>
     
     <?php
